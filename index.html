@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caja de comentarios</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="container">
+        <h1>Titulo del video</h1>
+        <div class="containerImg"></div>
+            <form class="comentarios" onsubmit="enviarComentario(event)">
+            <h2>Comentarios</h2>
+            <textarea name="comentar" id="comentarEnviar" placeholder="comentar.."></textarea>
+            <button type="submit">comentar</button>
+        </form>
+        <div class="comentarios"id="cajaComentarios">
+            <div id="comentar" >
+                <h3>@User-name</h3>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iusto sequi, saepe quae dicta, natus nesciunt provident distinctio consequatur placeat modi non nisi eius, totam deleniti? Numquam repellendus veniam quod.</p>
+            </div>
+        </div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
