@@ -4,40 +4,49 @@ const comentarios_yutu = [];
 
 const comentarios = {
     persona: "@juliaaan",
-    comentario: "hola"
+    comentario: ""
 };
 
 function enviarComentario(event){
     event.preventDefault();
     let input = document.getElementById("comentarEnviar").value
+
+    if (input.replaceAll(" ", "") === ""){
+        document.getElementById("comentarEnviar").value.innerHTML = "";
+        alert("no puedes enviar un comentario vacio, intenta llenarlo");
+        return;
+        
+    }
+
+    //cheked evento para ver si esta el input de boton verificado y asi
+    //target, clossed, quarySelector
+    //ver quien produjo el evento, clossed para ir al elemento padre mas cercano y quarySelector para ir a la imagen hija mas cercana 
+    //son eventos a usar 
+    
     comentarios.comentario = input;
     // console.log(`${comentarios.comentario}`)
-// push es para agregar al final del arreglo un comentario
-// push en general sirve para colocar elementos al final de un arreglo
+    // push es para agregar al final del arreglo un comentario
+    // push en general sirve para colocar elementos al final de un arreglo
     comentarios_yutu.push(
         {
             persona: comentarios.persona,
             comentario: comentarios.comentario
         }
     )
-
-    document.getElementById("comentar").value = "";
     caja.innerHTML = "";
     comentarios_yutu.forEach(
         (comentarios) => {
             caja.innerHTML += `
-    <div id="comentar">
+            <div id="comentar">
             <h3>
-                ${comentarios.persona}
+            ${comentarios.persona}
             </h3>
             <p class= "texto">
-                ${comentarios.comentario}
+            ${comentarios.comentario}
             </p> 
-        </div>
-    `
+            </div>
+            `
         }
     )
-
-    
-
+    document.getElementById("comentarEnviar").value = "";
 }
