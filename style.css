@@ -86,4 +86,5 @@ body{
 
 .container .comentarios #comentar .texto{
     font-weight: 600;
+    overflow-wrap: anywhere;
 }
