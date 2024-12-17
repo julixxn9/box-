@@ -97,6 +97,7 @@ body{
     font-weight: 600;
     overflow-wrap: anywhere;
 }
+<<<<<<< HEAD
 
 .container .comentarios #comentar .header_comment{
     display: flex;
@@ -224,3 +225,5 @@ body{
         height: 20px;
     }
 }
+=======
+>>>>>>> 0e8f48ddbf07ad26fdafa4dba5cff476a83bcfa2
