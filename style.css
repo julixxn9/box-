@@ -32,14 +32,16 @@ body{
 
 .container .containerImg{
     background-image: url(./img/01heg5vwv3b96jd0x87b.jpg);
-    background-size: cover;
-    width: 480px;
-    height: 280px;
+    background-size: contain; /* La imagen se adapta y se muestra completa */
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%; /* Se ajusta al tamaño del contenedor */
+    max-width: 480px; /* Ancho máximo */
+    height: auto; /* Altura automática */
     border-radius: 5px;
-    aspect-ratio: 9/16;
+    aspect-ratio: 16/9; /* Relación de aspecto 16:9 */
 }
 
-/* aspecta-ratio 16/9 */
 .container .comentarios{
     background-color: #53533d;
     padding: 15px;
@@ -62,6 +64,7 @@ body{
     border: none;
     font-weight: bold;
     margin-left: auto;
+    user-select: none;
 }
 
 .container .comentarios textarea{
@@ -81,9 +84,143 @@ body{
 
 .container .comentarios #comentar h3{
     color: #fff;
-    font-size: 20px;
+    font-size: 18px;
+}
+
+.container .comentarios #comentar img{
+    width: 45px;
+    background-color: #fff;
+    border-radius: 50%;
 }
 
 .container .comentarios #comentar .texto{
     font-weight: 600;
+    overflow-wrap: anywhere;
+}
+
+.container .comentarios #comentar .header_comment{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.container .comentarios #comentar .header_comment .user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.container .comentarios #comentar .header_comment .menu{
+    position: relative;
+    background-image: url(./img/icons8-menú-2-30.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.container .comentarios #comentar .header_comment .menu:hover{
+    background-color: #53533d;
+}
+
+.container .comentarios #comentar .header_comment .menu input{
+    display: none;
+}
+
+.container .comentarios #comentar .header_comment .menu ul{
+    visibility: hidden;
+    background-color: #fff;
+    position: absolute;
+    width: 100px;
+    height: 115px;
+    list-style: none;
+    border-radius: 5px 0px 5px 5px ;
+    top: 30px;
+    right: 10px;
+    overflow: hidden;
+}
+
+.container .comentarios #comentar .header_comment .menu ul li{
+    padding: 10px;
+    user-select: none;
+}
+
+.container .comentarios #comentar .header_comment .menu ul li:hover{
+    background-color: rgb(207, 207, 207);
+}
+
+/* MEDIA QUERY RESPONSIVE PARA TABLET Y TELÉFONO */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+        gap: 15px;
+    }
+
+    .container .containerImg {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        max-width: 100%; /* Máximo permitido */
+        height: auto; /* Altura automática */
+        aspect-ratio: 16/9; /* Mantiene la relación de aspecto */
+        background-size: contain; /* Imagen completa */
+    }
+
+    .container .comentarios {
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .container .comentarios button {
+        width: 100%; 
+        margin-left: 0;
+    }
+
+    .container .comentarios textarea {
+        width: 100%; 
+    }
+
+    .container .comentarios #comentar .header_comment {
+        gap: 10px;
+    }
+
+    .container .comentarios #comentar .header_comment .menu{
+        width: 25px;
+        height: 25px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container h1 {
+        font-size: 20px; 
+    }
+
+    .container .containerImg {
+        background-size: contain;
+    }
+
+    .container .comentarios h2 {
+        font-size: 16px; 
+    }
+
+    .container .comentarios button {
+        font-size: 14px; 
+    }
+
+    .container .comentarios textarea {
+        padding: 5px; 
+    }
+
+    .container .comentarios #comentar h3 {
+        font-size: 14px;
+    }
+
+    .container .comentarios #comentar .texto {
+        font-size: 12px;
+    }
+
+    .container .comentarios #comentar .header_comment .menu{
+        width: 20px;
+        height: 20px;
+    }
 }
