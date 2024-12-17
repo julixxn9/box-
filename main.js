@@ -52,13 +52,7 @@ function enviarComentario(event){
                 </ul>
             </label>
         </div>
-                <p class="texto">${comentarios.comentario}</p>
-            <h3>
-            ${comentarios.persona}
-            </h3>
-            <p class= "texto">
-            ${comentarios.comentario}
-            </p> 
+            <p class="texto">${comentarios.comentario}</p>
             </div>
             `
         }
