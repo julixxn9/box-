@@ -56,6 +56,7 @@ function enviarComentario(event){
             </div>
             `
         }
+// comentario
     )
     document.getElementById("comentarEnviar").value = "";
 }
