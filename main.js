@@ -38,7 +38,6 @@ function enviarComentario(event){
         (comentarios) => {
             caja.innerHTML += `
             <div id="comentar">
-<<<<<<< HEAD
                         <div class="header_comment">
                 <div class="user">
                         <img src="./img/png-transparent-user-instagram-person-profile-instagram-ui-glyph-icon-removebg-preview.png" alt="user">
@@ -54,21 +53,18 @@ function enviarComentario(event){
             </label>
         </div>
                 <p class="texto">${comentarios.comentario}</p>
-=======
             <h3>
             ${comentarios.persona}
             </h3>
             <p class= "texto">
             ${comentarios.comentario}
             </p> 
->>>>>>> 0e8f48ddbf07ad26fdafa4dba5cff476a83bcfa2
             </div>
             `
         }
     )
     document.getElementById("comentarEnviar").value = "";
 }
-<<<<<<< HEAD
 
 function mostrarMenu(event){
     // console.log(event.target)
@@ -79,5 +75,3 @@ function mostrarMenu(event){
 
     }
 }
-=======
->>>>>>> 0e8f48ddbf07ad26fdafa4dba5cff476a83bcfa2
