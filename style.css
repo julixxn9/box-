@@ -30,17 +30,17 @@ body{
     color: #fff;
 }
 
-.container .containerImg{
+/* .container .containerImg{
     background-image: url(./img/01heg5vwv3b96jd0x87b.jpg);
-    background-size: contain; /* La imagen se adapta y se muestra completa */
+    background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-    width: 100%; /* Se ajusta al tamaño del contenedor */
-    max-width: 480px; /* Ancho máximo */
-    height: auto; /* Altura automática */
+    width: 100%; 
+    max-width: 480px; 
+    height: auto; 
     border-radius: 5px;
-    aspect-ratio: 16/9; /* Relación de aspecto 16:9 */
-}
+    aspect-ratio: 16/9;
+} */
 
 .container .comentarios{
     background-color: #53533d;
@@ -234,10 +234,6 @@ body{
 @media (max-width: 480px) {
     .container h1 {
         font-size: 20px; 
-    }
-
-    .container .containerImg {
-        background-size: contain;
     }
 
     .container .comentarios h2 {
