@@ -73,45 +73,46 @@ body{
     resize: vertical;
 }
 
-.container .comentarios #comentar{
+.container .comentarios .comentar{
+    transition: 0.5s;
     background-color: #a28368;
     padding: 10px;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
-.container .comentarios #comentar h3{
+.container .comentarios .comentar h3{
     color: #fff;
     font-size: 18px;
 }
 
-.container .comentarios #comentar img{
+.container .comentarios .comentar img{
     width: 45px;
     background-color: #fff;
     border-radius: 50%;
 }
 
-.container .comentarios #comentar .texto{
+.container .comentarios .comentar .texto{
     font-weight: 600;
     overflow-wrap: anywhere;
 }
 
 
-.container .comentarios #comentar .header_comment{
+.container .comentarios .comentar .header_comment{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.container .comentarios #comentar .header_comment .user{
+.container .comentarios .comentar .header_comment .user{
     display: flex;
     align-items: center;
     gap: 10px;
 }
 
-.container .comentarios #comentar .header_comment .menu{
+.container .comentarios .comentar .header_comment .menu{
     position: relative;
     background-image: url(./img/icons8-menú-2-30.png);
     background-repeat: no-repeat;
@@ -122,15 +123,15 @@ body{
     z-index: 1;
 }
 
-.container .comentarios #comentar .header_comment .menu:hover{
+.container .comentarios .comentar .header_comment .menu:hover{
     background-color: #53533d;
 }
 
-.container .comentarios #comentar .header_comment .menu input{
+.container .comentarios .comentar .header_comment .menu input{
     display: none;
 }
 
-.container .comentarios #comentar .header_comment .menu ul{
+.container .comentarios .comentar .header_comment .menu ul{
     visibility: hidden;
     background-color: #fff;
     position: absolute;
@@ -143,14 +144,53 @@ body{
     overflow: hidden;
 }
 
-.container .comentarios #comentar .header_comment .menu ul li{
+.container .comentarios .comentar .header_comment .menu ul li{
     padding: 10px;
     user-select: none;
 }
 
-.container .comentarios #comentar .header_comment .menu ul li:hover{
+.container .comentarios .comentar .header_comment .menu ul li:hover{
     background-color: rgb(207, 207, 207);
 }
+
+.container .comentarios .comentar .iteraciones ul{
+    display: flex;
+    list-style: none;
+    gap: 18px;
+}
+
+.container .comentarios .comentar .iteraciones ul label img{
+    border-radius: 0%;
+    background-color: transparent;
+    width: 20px;
+}
+
+.container .comentarios .comentar .iteraciones ul label input{
+    display: none;
+}
+
+.container .comentarios .coment-deteled{
+    color: #53533d;
+    background-color: #1b1b15;
+    transition: 0.5s;
+    text-decoration: line-through;
+}
+
+.container .comentarios .coment-deteled h3 {
+    color: #53533d;
+}
+
+.container .comentarios .coment-report{
+    transition: 1s;
+    background-color: #9c1c00;
+    text-decoration: none;
+    color: #000;
+}
+
+.container .comentarios .coment-report h3{
+    color: #fff;
+}
+
 
 /* MEDIA QUERY RESPONSIVE PARA TABLET Y TELÉFONO */
 @media (max-width: 768px) {
@@ -181,11 +221,11 @@ body{
         width: 100%; 
     }
 
-    .container .comentarios #comentar .header_comment {
+    .container .comentarios .comentar .header_comment {
         gap: 10px;
     }
 
-    .container .comentarios #comentar .header_comment .menu{
+    .container .comentarios .comentar .header_comment .menu{
         width: 25px;
         height: 25px;
     }
@@ -212,15 +252,15 @@ body{
         padding: 5px; 
     }
 
-    .container .comentarios #comentar h3 {
+    .container .comentarios .comentar h3 {
         font-size: 14px;
     }
 
-    .container .comentarios #comentar .texto {
+    .container .comentarios .comentar .texto {
         font-size: 12px;
     }
 
-    .container .comentarios #comentar .header_comment .menu{
+    .container .comentarios .comentar .header_comment .menu{
         width: 20px;
         height: 20px;
     }

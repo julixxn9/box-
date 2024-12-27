@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Caja de comentarios</title>
     <link rel="stylesheet" href="./style.css">
 </head>
+
 <body>
     <section class="container">
         <h1>Titulo del video</h1>
         <div class="containerImg"></div>
-            <form class="comentarios" onsubmit="enviarComentario(event)">
+        <form class="comentarios" onsubmit="enviarComentario(event)">
             <h2>Comentarios</h2>
             <textarea name="comentar" id="comentarEnviar" placeholder="comentar.."></textarea>
             <button type="submit">comentar</button>
         </form>
-        <section class="comentarios"id="cajaComentarios">
-            <div id="comentar" >
+        <section class="comentarios" id="cajaComentarios">
+            <div id="comentar" class="comentar">
                 <div class="header_comment">
-                <div class="user">
-                        <img src="./img/png-transparent-user-instagram-person-profile-instagram-ui-glyph-icon-removebg-preview.png" alt="user">
-                <h3>@User-name</h3>
-            </div>
-            <label class="menu">
-                <input type="checkbox" onchange="mostrarMenu(event)">
-                <ul>
-                    <!-- overflow hidden para qe no sobre ponga estilos de los elementos hijos -->
-                    <li>modificar</li>
-                    <li>borrar</li>
-                    <li>reporte</li>
-                </ul>
-            </label>
-        </div>
-                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iusto sequi, saepe quae dicta, natus nesciunt provident distinctio consequatur placeat modi non nisi eius, totam deleniti? Numquam repellendus veniam quod.</p>
+                    <div class="user">
+                        <img src="./img/png-transparent-user-instagram-person-profile-instagram-ui-glyph-icon-removebg-preview.png"
+                            alt="user">
+                        <h3>@User-name</h3>
+                    </div>
+                    <label class="menu">
+                        <input type="checkbox" onchange="mostrarMenu(event)">
+                        <ul>
+                            <!-- overflow hidden para qe no sobre ponga estilos de los elementos hijos -->
+                            <li>modificar</li>
+                            <li onclick="detele_comment(event,index)">borrar</li>
+                            <li onclick="report_comment(event,index)">reporte</li>
+                        </ul>
+                    </label>
+                </div>
+                <p class="texto">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque iusto sequi, saepe
+                    quae dicta, natus nesciunt provident distinctio consequatur placeat modi non nisi eius, totam
+                    deleniti? Numquam repellendus veniam quod.</p>
+                <div class="iteraciones">
+                    <ul>
+                        <label>
+                            <input type="checkbox" name="" onchange="like(event, index)">
+                            <img src="./img/hand-thumbs-up.svg" alt="">
+                        </label>
+                        <label>
+                            <input type="checkbox" name="" onchange="dislike(event, index)">
+                            <img src="./img/hand-thumbs-down.svg" alt="">
+                        </label>
+                        <label>
+                            <input type="checkbox" name="" onchange="comment(event, index)">
+                            <img src="./img/chat-left-text.svg" alt="">
+                        </label>
+                        <label>
+                            <input type="checkbox" name="" onchange="favorito(event, index)">
+                            <img src="./img/suit-heart.svg" alt="">
+                        </label>
+                    </ul>
+                </div>
             </div>
         </section>
     </section>
