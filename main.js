@@ -28,7 +28,7 @@ function enviarComentario(event) {
 
     // Agregar al array y limpiar el campo
     comentarios_yutu.push(nuevoComentario);
-    
+document.getElementById("comentarEnviar").value = "";
     caja.innerHTML = "";
     comentarios_yutu.forEach(
         (comentarios) => {
@@ -52,9 +52,8 @@ function enviarComentario(event) {
             </div>
             `
         }
-// comentario
+
     )
-    document.getElementById("comentarEnviar").value = "";
 
     renderComentarios();
 }
@@ -62,7 +61,6 @@ function enviarComentario(event) {
 // Renderizar comentarios
 function renderComentarios() {
     caja.innerHTML = ""; // Limpiar el contenedor
-
     comentarios_yutu.forEach((elemento, indice) => {
         const { persona, comentario, reacciones } = elemento;
 
